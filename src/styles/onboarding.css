@@ -1,0 +1,292 @@
+/* MODERN TECH COLORS */
+:root {
+  --bg-dark: #0b0b0f;
+  --glow-purple: #a35bff;
+  --glow-cyan: #4df3ff;
+  --text-light: #f2f2f2;
+  --fade-duration: 1.2s;
+}
+
+/* MAIN SCREEN */
+.onboarding-container {
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 1;
+  animation: fadeInScreen var(--fade-duration) ease-out forwards;
+  position: relative;
+}
+
+/* EXIT ANIMATION */
+.onboarding-container.exit {
+  animation: fadeOutScreen var(--fade-duration) ease-in forwards;
+}
+
+/* -------- PARTICLES BACKGROUND -------- */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, rgba(163,91,255,0.35) 0%, transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(77,243,255,0.28) 0%, transparent 65%);
+  animation: pulseGlow 5s infinite alternate;
+  z-index: 1;
+}
+
+/* -------- MOVING TECH LINES -------- */
+.tech-line {
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(var(--glow-purple), var(--glow-cyan));
+  opacity: 0.4;
+  filter: blur(1px);
+  animation: floatLine 3.5s infinite ease-in-out;
+}
+
+.tl-1 { left: 18%; top: -20px; animation-delay: 0s; }
+.tl-2 { right: 22%; top: 60px; animation-delay: 0.8s; }
+.tl-3 { left: 50%; top: 140px; animation-delay: 1.6s; }
+
+/* -------- TEXT ANIMATION -------- */
+.onboarding-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 2px;
+  z-index: 3;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: slideUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+.onboarding-sub {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #dcdcdc;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: slideUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.7s;
+}
+
+/* -------- KEYFRAMES -------- */
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+@keyframes floatLine {
+  0% { transform: translateY(-40px); }
+  50% { transform: translateY(40px); }
+  100% { transform: translateY(-40px); }
+}
+
+@keyframes fadeInScreen {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOutScreen {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* ============================
+   3D FLOATING SHAPES
+============================ */
+
+.shape {
+  position: absolute;
+  z-index: 2;
+  opacity: 0.35;
+  filter: drop-shadow(0 0 12px rgba(120, 70, 255, 0.8));
+  animation: float3D 7s infinite ease-in-out alternate,
+             rotate3D 12s infinite linear;
+}
+
+/* FLOATING CUBE */
+.cube {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #7d3cff, #27e0ff);
+  top: 18%;
+  left: 12%;
+  transform-style: preserve-3d;
+}
+
+/* SPHERE (GLOW BALL) */
+.sphere {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #4df3ff, #8a3bff);
+  top: 65%;
+  right: 10%;
+  animation-duration: 8s;
+}
+
+/* PYRAMID */
+.pyramid {
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 85px solid #9a5bff;
+  top: 40%;
+  left: 70%;
+  opacity: 0.28;
+  animation-duration: 10s;
+}
+
+
+/* FLOATING UP/DOWN */
+@keyframes float3D {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-35px) translateX(20px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* ROTATION EFFECT */
+@keyframes rotate3D {
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN FOR ALL DEVICES
+======================================== */
+
+/* Medium phones and small tablets */
+@media (max-width: 768px) {
+  .onboarding-title {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .onboarding-sub {
+    font-size: 1rem;
+  }
+
+  /* resize tech lines */
+  .tech-line {
+    height: 90px;
+    opacity: 0.32;
+  }
+
+  .tl-1 { left: 10%; top: -10px; }
+  .tl-2 { right: 12%; top: 40px; }
+  .tl-3 { left: 45%; top: 120px; }
+
+  /* 3D shapes */
+  .cube {
+    width: 55px;
+    height: 55px;
+    top: 22%;
+    left: 10%;
+  }
+
+  .sphere {
+    width: 70px;
+    height: 70px;
+    top: 70%;
+    right: 8%;
+  }
+
+  .pyramid {
+    border-left-width: 40px;
+    border-right-width: 40px;
+    border-bottom-width: 65px;
+    top: 42%;
+    left: 65%;
+  }
+}
+
+/* Small phones (iPhone SE, small Androids) */
+@media (max-width: 480px) {
+  .onboarding-title {
+    font-size: 1.8rem;
+  }
+
+  .onboarding-sub {
+    font-size: 0.86rem;
+  }
+
+  /* tech lines */
+  .tech-line {
+    height: 70px;
+  }
+
+  .tl-1 { left: 8%; top: 0px; }
+  .tl-2 { right: 10%; top: 55px; }
+  .tl-3 { left: 50%; top: 110px; }
+
+  /* small shapes */
+  .cube {
+    width: 40px;
+    height: 40px;
+    top: 20%;
+    left: 8%;
+  }
+
+  .sphere {
+    width: 55px;
+    height: 55px;
+    top: 72%;
+    right: 6%;
+  }
+
+  .pyramid {
+    border-left-width: 30px;
+    border-right-width: 30px;
+    border-bottom-width: 50px;
+    top: 45%;
+    left: 60%;
+  }
+}
+
+/* Large screens / desktops */
+@media (min-width: 1200px) {
+  .onboarding-title {
+    font-size: 3.4rem;
+  }
+
+  .onboarding-sub {
+    font-size: 1.3rem;
+  }
+
+  .cube {
+    width: 85px;
+    height: 85px;
+    left: 15%;
+  }
+
+  .sphere {
+    width: 120px;
+    height: 120px;
+    right: 12%;
+  }
+
+  .pyramid {
+    border-left-width: 70px;
+    border-right-width: 70px;
+    border-bottom-width: 100px;
+    left: 73%;
+  }
+}

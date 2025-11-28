@@ -1,0 +1,102 @@
+/* SECTION LAYOUT */
+.team-section {
+  width: 100%;
+  padding: 60px 8%;
+}
+
+.team-header {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.tag {
+  color: #6c4ffb;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.team-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.sub {
+  font-size: 15px;
+  color: #666;
+}
+
+/* GRID */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.team-card {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: relative;
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.team-img-box {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+}
+
+.team-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT INFO */
+.team-info {
+  padding: 18px 16px 22px;
+}
+
+.team-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.team-info p {
+  font-size: 15px;
+  color: #777;
+}
+
+/* SHARE BUTTON */
+.share-btn {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  border: none;
+  background: #6c4ffb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.share-btn:hover {
+  background: #5839d8;
+}

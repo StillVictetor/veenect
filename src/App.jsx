@@ -1,0 +1,61 @@
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import OnboardingScreen from "./components/onboarding.jsx";
+import Home from "./components/Home.jsx";
+import Offers from "./components/Offers.jsx";
+import Choose from "./components/Choose.jsx";
+import SponsorsBanner from "./components/SponsorsBanner.jsx";
+import Team from "./components/Team.jsx";
+
+
+
+function App() {
+  const [showOnboarding, setShowOnboarding] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowOnboarding(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showOnboarding) {
+    return <OnboardingScreen />;
+  }
+
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <div
+                style={{ width: "100%", height: "600px", position: "relative" }}
+              >
+                <Home
+                  particleColors={["#ffffff", "#ffffff"]}
+                  particleCount={200}
+                  particleSpread={10}
+                  speed={0.1}
+                  particleBaseSize={100}
+                  moveParticlesOnHover={true}
+                  alphaParticles={false}
+                  disableRotation={false}
+                />
+                  <Offers/>
+                  <Team/>
+                  <Choose/>
+              </div>
+            </>
+          }
+        ></Route>
+      </Routes>
+    </>
+  );
+}
+
+export default App;
