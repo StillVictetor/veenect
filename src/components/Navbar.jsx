@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Navbar.css";
-// import logo from "../assets/veenectlogo1.png";
+import "../styles/navbar.css";
 import { Menu, MenuIcon, X } from "lucide-react";
 import { Link } from "react-router-dom";;
 
