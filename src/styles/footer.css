@@ -154,6 +154,16 @@
   color: #f2f2f2;
 }
 
+.copyright span{
+    font-size: 15px;
+  color: #f2f2f2;
+  line-height: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  letter-spacing: .2rem;
+    font-family: "Hexco", sans-serif;
+}
+
 .copyright-container {
   width: 90%;
   margin: auto;

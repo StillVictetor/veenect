@@ -68,14 +68,21 @@ export default function Footer() {
             </ul>
           </div>
 
-            <div className="footer-section newsletter">
-              <h3 className="footer-title title-border">Newsletter</h3>
-              <p>Subscribe to our newsletter to get the latest updates.</p>
-                <form className="newsletter-form">
-                    <input type="email" name="Email" placeholder="Enter your email" required />
-                    <button type="submit" className="btn">Subscribe</button>
-                </form>
-            </div>
+          <div className="footer-section newsletter">
+            <h3 className="footer-title title-border">Newsletter</h3>
+            <p>Subscribe to our newsletter to get the latest updates.</p>
+            <form className="newsletter-form">
+              <input
+                type="email"
+                name="Email"
+                placeholder="Enter your email"
+                required
+              />
+              <button type="submit" className="btn">
+                Subscribe
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
@@ -83,7 +90,7 @@ export default function Footer() {
       <div className="copyright-area">
         <div className="copyright-container">
           <p className="copyright">
-            &copy; CodeCarnival 2022. All Rights Reserved.
+            &copy; <span>VEENECT</span> 2025. All Rights Reserved.
           </p>
 
           <div className="payment">
