@@ -68,26 +68,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h3 className="footer-title title-border">Quick Links</h3>
-            <ul className="footer-menu">
-              <li>
-                <a href="#">My Account</a>
-              </li>
-              <li>
-                <a href="#">My Wishlist</a>
-              </li>
-              <li>
-                <a href="#">My Cart</a>
-              </li>
-              <li>
-                <Link to="/">Terms and Condition</Link>
-              </li>
-              <li>
-                <Link to="/">Privacy Policy</Link>
-              </li>
-            </ul>
-          </div>
+            <div className="footer-section newsletter">
+              <h3 className="footer-title title-border">Newsletter</h3>
+              <p>Subscribe to our newsletter to get the latest updates.</p>
+                <form className="newsletter-form">
+                    <input type="email" name="Email" placeholder="Enter your email" required />
+                    <button type="submit" className="btn">Subscribe</button>
+                </form>
+            </div>
         </div>
       </div>
 
