@@ -5,7 +5,7 @@ import OnboardingScreen from "./components/onboarding.jsx";
 import Home from "./components/Home.jsx";
 import Offers from "./components/Offers.jsx";
 import Choose from "./components/Choose.jsx";
-import SponsorsBanner from "./components/SponsorsBanner.jsx";
+import Footer from './components/Footer.jsx'
 import Team from "./components/Team.jsx";
 
 
@@ -29,6 +29,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
+
         <Route
           path="/"
           element={
@@ -49,6 +50,7 @@ function App() {
                   <Offers/>
                   <Team/>
                   <Choose/>
+                  <Footer/>
               </div>
             </>
           }

@@ -44,6 +44,7 @@ const Choose = () => {
         <h2 className="section-title">
           Why Choose <span>VEENECT?</span>
         </h2>
+        <p>We Work with the best Expertise</p>
         <div className="choose-container">
           {data.map(({ id, name, description, icon }) => {
             return (
@@ -52,9 +53,12 @@ const Choose = () => {
                   {" "}
                   <span>{icon}</span>{" "}
                 </p>
-                <h3 className="choose-title"> <span>{name}</span></h3>
+                <h3 className="choose-title">
+                  {" "}
+                  <span>{name}</span>
+                </h3>
                 <p className="choose-description">{description}</p>
-                <button className="btn" >Read More</button>
+                <button className="btn">Read More →</button>
               </div>
             );
           })}
