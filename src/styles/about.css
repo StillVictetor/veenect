@@ -51,6 +51,7 @@ span {
   color: #fff;
   transition: background-color 0.4s ease;
 }
+
 .home-buttons button.active,
 .home-buttons button:hover {
   background-color: #fff;
