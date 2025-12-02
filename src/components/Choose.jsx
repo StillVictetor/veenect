@@ -7,6 +7,7 @@ import {
   HelpCircleIcon,
 } from "lucide-react";
 
+
 const Choose = () => {
   const data = [
     {
@@ -16,6 +17,7 @@ const Choose = () => {
       description:
         "Our team of seasoned professionals brings years of industry experience to deliver top-notch solutions tailored to your needs.",
     },
+
     {
       id: 2,
       name: "Customer-Centric Approach",
@@ -23,6 +25,7 @@ const Choose = () => {
       description:
         "We prioritize our clients' satisfaction by understanding their unique requirements and providing personalized services that exceed expectations.",
     },
+
     {
       id: 3,
       name: "Innovative Solutions",
@@ -30,6 +33,7 @@ const Choose = () => {
       description:
         "We leverage the latest technologies and industry trends to create innovative solutions that drive business growth and success.",
     },
+
     {
       id: 4,
       name: "Comprehensive Support",
@@ -58,7 +62,7 @@ const Choose = () => {
                   <span>{name}</span>
                 </h3>
                 <p className="choose-description">{description}</p>
-                <button className="btn">Read More →</button>
+                <button className="btn">Read More → </button>
               </div>
             );
           })}

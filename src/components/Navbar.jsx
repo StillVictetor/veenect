@@ -8,36 +8,26 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className="navbar"
-      >
-        <div
-          
-          className="navbar-left"
-        >
+      <nav className="navbar">
+        <div className="navbar-left">
           <button
             className="icon-btn1"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
-            <Menu size={30} color="#fff" style={{cursor: "pointer"}} />
+            <Menu size={30} color="#fff" style={{ cursor: "pointer" }} />
           </button>
         </div>
 
-        <div
-          
-          className="navbar-center"
-        >
+        <div className="navbar-center">
           <a href="/">
             {" "}
             <h2>VEENECT</h2>
           </a>
         </div>
 
-        <div
-          className="navbar-right"
-        >
-          <Link to="/get-started" className="btn" >
+        <div className="navbar-right">
+          <Link to="/get-started" className="btn">
             Get Started
           </Link>
         </div>
@@ -50,9 +40,7 @@ export default function Navbar() {
       />
 
       {/* Side Menu */}
-      <aside
-        className={`side-menu ${open ? "open" : ""}`}
-      >
+      <aside className={`side-menu ${open ? "open" : ""}`}>
         <div className="side-header">
           <button
             className="icon-btn"
@@ -72,6 +60,17 @@ export default function Navbar() {
               data-text="Home"
             >
               Home
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/about"
+              onClick={() => setOpen(false)}
+              className="button-one style-2"
+              data-text="About Us"
+            >
+              About
             </Link>
           </li>
         </ul>

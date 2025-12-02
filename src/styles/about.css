@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span {
+  color: #007BFF;
+}
+
+.particles-container-about {
+  position: relative;
+  height: 60vh;
+  background-color: #000;
+    overflow: hidden;
+}
+
+.about-content {
+  position: absolute;
+  width: 100%;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.about-content h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  margin-top: 8rem;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.home-buttons button {
+  display: inline-block;
+  padding: .7rem 2rem .7rem;
+  font-size: 1.2rem;
+  border: .1rem solid #fff;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  transition: background-color 0.4s ease;
+}
+.home-buttons button.active,
+.home-buttons button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.about{
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 3rem 7% 3rem;
+    text-align: center;
+    min-height: 70vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.about .about-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.about .about-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+}
+
+.about .about-image img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.6s ease;
+}
+
+.about .about-image img:hover{
+    transform: scale(1.05);
+}
+
+.about .section-title{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+}
+
+.about .about-text{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    text-align: left;
+    justify-content: center;
+    border-top: #007BFF 2px solid;
+    border-right: #007BFF 2px solid;
+    border-top-right-radius: 50px;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.about .about-text ul{
+    margin-top: 1rem;
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .about-content{
+    padding: 1.3rem;
+    top: 43%;
+  }
+
+  .about-content h1 {
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    margin-top: 5rem;
+  }
+
+  .home-buttons {
+    gap: 1rem;
+  }
+
+  .home-buttons button {
+    width: 50%;
+    font-size: 1rem;
+    padding: .6rem 1.5rem .6rem;
+  }
+
+    .about .about-container{
+        grid-template-columns: 1fr;
+    }
+
+    .about .about-image{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .about .about-text{
+        text-align: left;
+    }
+}

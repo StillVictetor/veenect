@@ -7,6 +7,8 @@ import Offers from "./components/Offers.jsx";
 import Choose from "./components/Choose.jsx";
 import Footer from './components/Footer.jsx'
 import Team from "./components/Team.jsx";
+import About from "./components/About.jsx";
+import AboutContent from "./components/AboutContent.jsx";
 
 
 
@@ -29,7 +31,6 @@ function App() {
     <>
       <Navbar />
       <Routes>
-
         <Route
           path="/"
           element={
@@ -47,15 +48,39 @@ function App() {
                   alphaParticles={false}
                   disableRotation={false}
                 />
-                  <Offers/>
-                  <Team/>
-                  <Choose/>
-                  <Footer/>
+                <Offers />
+                <Team />
+                <Choose />
+                <Footer />
+              </div>
+            </>
+          }
+        ></Route>
+        <Route
+          path="/about"
+          element={
+            <>
+              <div
+                style={{ width: "100%", height: "400px", position: "relative" }}
+              >
+                <About
+                  particleColors={["#ffffff", "#ffffff"]}
+                  particleCount={200}
+                  particleSpread={10}
+                  speed={0.1}
+                  particleBaseSize={100}
+                  moveParticlesOnHover={true}
+                  alphaParticles={false}
+                  disableRotation={false}
+                />
+                <AboutContent/>
+                <Footer />
               </div>
             </>
           }
         ></Route>
       </Routes>
+      <Footer />
     </>
   );
 }
