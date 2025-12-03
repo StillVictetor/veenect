@@ -39,14 +39,15 @@ function App() {
                 style={{ width: "100%", height: "600px", position: "relative" }}
               >
                 <Home
-                  particleColors={["#ffffff", "#ffffff"]}
-                  particleCount={200}
-                  particleSpread={10}
-                  speed={0.1}
-                  particleBaseSize={100}
-                  moveParticlesOnHover={true}
-                  alphaParticles={false}
-                  disableRotation={false}
+                  enabledWaves={["top", "middle", "bottom"]}
+                  // Array - specify line count per wave; Number - same count for all waves
+                  lineCount={[10, 15, 20]}
+                  // Array - specify line distance per wave; Number - same distance for all waves
+                  lineDistance={[8, 6, 4]}
+                  bendRadius={5.0}
+                  bendStrength={-0.5}
+                  interactive={true}
+                  parallax={true}
                 />
                 <Offers />
                 <Team />
@@ -73,7 +74,7 @@ function App() {
                   alphaParticles={false}
                   disableRotation={false}
                 />
-                <AboutContent/>
+                <AboutContent />
                 <Footer />
               </div>
             </>
