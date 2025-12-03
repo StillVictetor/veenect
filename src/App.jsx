@@ -35,12 +35,18 @@ function App() {
           path="/"
           element={
             <>
-              <div style={{ width: "100%", position: "relative" }}>
+              <div
+                style={{ width: "100%", height: "700px", position: "relative" }}
+              >
                 <Home
-                  hoverIntensity={0.5}
-                  rotateOnHover={true}
-                  hue={0}
-                  forceHoverState={false}
+                  particleColors={["#ffffff", "#ffffff"]}
+                  particleCount={200}
+                  particleSpread={10}
+                  speed={0.1}
+                  particleBaseSize={100}
+                  moveParticlesOnHover={true}
+                  alphaParticles={false}
+                  disableRotation={false}
                 />
                 <Offers />
                 <Team />
