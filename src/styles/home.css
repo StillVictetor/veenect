@@ -1,11 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 span {
-  color: #007BFF;
+  color: #007bff;
 }
 
 /* .darkveil-canvas {
@@ -19,17 +19,28 @@ span {
 } */
 
 .floating-lines-container {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
+  min-height: 100vh; /* give the hero area some breathing room */
+  /* display: block; */
 }
 
+/* canvas performance + layout */
+.floating-lines-container canvas {
+  position: absolute;
+  inset: 0; /* top:0;right:0;bottom:0;left:0 */
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  will-change: transform; /* hint to browser for smoother compositing */
+}
 
 .home-content {
   position: absolute;
   width: 100%;
-  top: 38%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -37,13 +48,19 @@ span {
   text-align: center;
   font-weight: bold;
   z-index: 10;
+  pointer-events: none; /* allow pointer events to pass to canvas by default */
+}
+
+.home-content * {
+  pointer-events: auto;
 }
 
 .home-content h1 {
   font-size: 5rem;
-  line-height: 1.2;
+  line-height: 1.05;
   margin-bottom: 3rem;
-  margin-top: 8rem;
+  margin-top: 1rem;
+  text-wrap: balance;
 }
 
 .home-buttons {
@@ -54,9 +71,9 @@ span {
 
 .home-buttons button {
   display: inline-block;
-  padding: .7rem 2rem .7rem;
+  padding: 0.7rem 2rem 0.7rem;
   font-size: 1.2rem;
-  border: .1rem solid #fff;
+  border: 0.1rem solid #fff;
   cursor: pointer;
   background-color: transparent;
   color: #fff;
@@ -69,15 +86,15 @@ span {
 }
 
 @media (max-width: 768px) {
-  .home-content{
+  .home-content {
     padding: 1.3rem;
-    top: 43%;
+    top: 52%;
   }
 
   .home-content h1 {
-    font-size: 4rem;
-    margin-bottom: 3.5rem;
-    margin-top: 5rem;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 
   .home-buttons {
@@ -87,6 +104,6 @@ span {
   .home-buttons button {
     width: 50%;
     font-size: 1rem;
-    padding: .6rem 1.5rem .6rem;
+    padding: 0.6rem 1.5rem 0.6rem;
   }
 }

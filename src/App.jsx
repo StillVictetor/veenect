@@ -36,7 +36,7 @@ function App() {
           element={
             <>
               <div
-                style={{ width: "100%", height: "600px", position: "relative" }}
+                style={{ width: "100%", position: "relative" }}
               >
                 <Home
                   enabledWaves={["top", "middle", "bottom"]}

@@ -295,9 +295,19 @@ export default function FloatingLines({
     camera.position.z = 1;
 
     const renderer = new WebGLRenderer({ antialias: true, alpha: false });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    // cap pixel ratio to reduce GPU load on high-DPI / low-end devices
+    const targetPixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+    renderer.setPixelRatio(targetPixelRatio);
+
+    // position the canvas absolutely so it doesn't affect layout and
+    // enable a couple of style hints for smoother compositing
+    renderer.domElement.style.position = "absolute";
+    renderer.domElement.style.top = "0";
+    renderer.domElement.style.left = "0";
     renderer.domElement.style.width = "100%";
     renderer.domElement.style.height = "100%";
+    renderer.domElement.style.display = "block";
+    renderer.domElement.style.willChange = "transform";
     containerRef.current.appendChild(renderer.domElement);
 
     const uniforms = {
@@ -524,5 +534,3 @@ export default function FloatingLines({
     </div>
   );
 }
-
-
