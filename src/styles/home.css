@@ -18,24 +18,14 @@ span {
     overflow: hidden;
 } */
 
-.floating-lines-container {
-  /* width: 100%; */
-  /* height: 100%; */
+.orb-container {
   position: relative;
-  /* overflow: hidden; */
-  min-height: 100vh; /* give the hero area some breathing room */
-  /* display: block; */
+  z-index: 0;
+  background-color: #000;
+  width: 100%;
+  min-height: 100vh;
 }
 
-/* canvas performance + layout */
-.floating-lines-container canvas {
-  position: absolute;
-  inset: 0; /* top:0;right:0;bottom:0;left:0 */
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
-  will-change: transform; /* hint to browser for smoother compositing */
-}
 
 .home-content {
   position: absolute;
@@ -76,6 +66,7 @@ span {
   border: 0.1rem solid #fff;
   cursor: pointer;
   background-color: transparent;
+  border-radius: 20px ;
   color: #fff;
   transition: background-color 0.4s ease;
 }
