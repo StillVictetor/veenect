@@ -81,13 +81,15 @@ span {
 @media (max-width: 768px) {
   .home-content {
     padding: 1.3rem;
-    top: 52%;
+    top: 40%;
+    line-height: 3rem;
   }
 
   .home-content h1 {
     font-size: 3.2rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
+    line-height: 4rem;
   }
 
   .home-buttons {
