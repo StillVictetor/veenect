@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #000;
+  background-color: #f2f2f2;
   padding: 0.9rem 4%;
   z-index: 100;
   margin: auto;
@@ -45,7 +45,7 @@
 .navbar-center h2 {
   font-family: "Hexco", sans-serif;
   font-size: 2rem;
-  color: #fff;
+  color: #000;
   font-weight: normal;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -56,10 +56,81 @@
   text-decoration: none;
 }
 
+
+
+.navbar .button-two {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  border: .1rem solid var(--accent);
+  background: #f2f2f2;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar .button-two::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1;
+  transition:
+    left 0.5s ease-in-out,
+    visibility 0.3s ease;
+}
+
+.navbar .button-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.navbar .button-two:hover,
+.navbar .button-two:focus,
+.navbar .button-two:active {
+  color: #fff;
+}
+
+.navbar .button-two:hover::before,
+.navbar .button-two:focus::before,
+.navbar .button-two:active::before {
+  left: 0;
+  visibility: visible;
+}
+
+.navbar .button-two.style-2 {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 30px;
+}
+
+.navbar .button-two.style-2 .btn{
+  text-decoration: none;
+  font-size: .90rem;
+  color: #000;
+}
+
+/* 
 .navbar-right .btn{
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-size: 1.1rem;
   font-weight: 500;
   padding: .5rem 1rem .5rem;
@@ -73,7 +144,7 @@
   background-color: #fff;
   color: #4aa3d8;
   border: none;
-}
+} */
 
 .icon-btn {
   background: transparent;
@@ -91,20 +162,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-}
-
-.cart-badge {
-  display: inline-block;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 5px;
-  border-radius: 18px;
-  background: #c8a165;
-  color: #fff;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-  margin-left: 6px;
 }
 
 .overlay {
@@ -131,7 +188,7 @@
   width: 240px;
   max-width: 80%;
   height: 100vh;
-  background: #000;
+  background: #f2f2f2;
   transform: translateX(-100%);
   transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.2, 1);
   z-index: 200;
@@ -165,7 +222,7 @@
   padding: 0 30px;
   height: 40px;
   line-height: 50px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;

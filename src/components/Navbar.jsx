@@ -15,7 +15,7 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
-            <Menu size={30} color="#fff" style={{ cursor: "pointer" }} />
+            <Menu size={30} color="#000" style={{ cursor: "pointer" }} />
           </button>
         </div>
 
@@ -26,11 +26,15 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="navbar-right">
+        <button className="button-two style-2" data-text="Get Started">
+          <Link to="/get-started" className="btn" >Get Started</Link>
+        </button>
+
+        {/* <div className="navbar-right">
           <Link to="/get-started" className="btn">
             Get Started
           </Link>
-        </div>
+        </div> */}
       </nav>
 
       {/* Overlay */}
@@ -47,7 +51,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             aria-label="Close menu"
           >
-            <X size={30} color="#fff" />
+            <X size={30} color="#000" />
           </button>
         </div>
 
