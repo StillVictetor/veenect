@@ -29,22 +29,6 @@ function App() {
 
   return (
     <>
-    <div className="App">
-      {/* Your Veenect content for Google */}
-      <div style={{ padding: '20px', maxWidth: '800px', margin: 'auto' }}>
-        <h1>Welcome to Veenect</h1>
-        <p>
-          Veenect is a web and app development company focused on building modern,
-          fast, and secure websites and applications. We provide top-notch services
-          for businesses looking to grow online.
-        </p>
-        <p>
-          At Veenect, we specialize in web development, app development, and
-          digital solutions tailored to your business needs. Our mission is to
-          help companies succeed online.
-        </p>
-      </div>
-    </div>
       <Navbar />
       <Routes>
         <Route
