@@ -62,7 +62,7 @@
   position: relative;
   display: inline-block;
   padding: 0.5rem;
-  border: .1rem solid var(--accent);
+  border: none;
   background: #f2f2f2;
   border-radius: 20px;
   font-weight: 600;
