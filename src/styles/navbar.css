@@ -64,7 +64,7 @@
   padding: 0.5rem;
   border: none;
   background: #f2f2f2;
-  border-radius: 20px;
+  border-radius: 5px;
   font-weight: 600;
   color: #000;
   text-transform: uppercase;
@@ -294,5 +294,19 @@
 
   .side-menu {
   width: 60%;
+  }
+
+  .navbar {
+    padding: 0.7rem 2%;
+  }
+
+  .navbar .button-two.style-2 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+  }
+
+  .navbar .button-two.style-2 .btn{
+    font-size: .80rem;
   }
 }
