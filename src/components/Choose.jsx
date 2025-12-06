@@ -48,7 +48,6 @@ const Choose = () => {
         <h2 className="section-title">
           Why Choose <span>VEENECT?</span>
         </h2>
-        <p>We Work with the best Expertise</p>
         <div className="choose-container">
           {data.map(({ id, name, description, icon }) => {
             return (

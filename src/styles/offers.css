@@ -9,9 +9,10 @@
 /* TITLE */
 .offers-heading {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 500;
   margin-left: 3rem;
-  /* margin-bottom: 4rem; */
+  letter-spacing: 1px;
+  font-family: "Hexco", sans-serif;
   background: linear-gradient(90deg, #007BFF, #6c4ffb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,7 +31,7 @@
 .offers-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0rem;
   padding: 0 4% 0;
 }
 

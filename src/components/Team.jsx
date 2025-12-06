@@ -7,19 +7,19 @@ const Team = () => {
   const members = [
     {
       id: 1,
-      name: "Christine Eve",
+      name: "Victor Stephen",
       role: "Web Developer",
       src: img1,
     },
     {
       id: 2,
-      name: "Christine Eve",
+      name: "Victor Stephen",
       role: "UI/UX Designer",
       src: img1,
     },
     {
       id: 3,
-      name: "Christine Eve",
+      name: "Victor Stephen",
       role: "Web Designer",
       src: img1,
     },

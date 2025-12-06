@@ -21,10 +21,10 @@
   align-items: center;
   justify-content: space-between;
   background-color: #f2f2f2;
-  padding: 0.9rem 4%;
+  padding: 0.9rem 8%;
   z-index: 100;
   margin: auto;
-  /* box-shadow: 0 1px 2px var(--accent); */
+  box-shadow: 1px 1px 1px var(--accent);
 }
 
 .navbar-left,
@@ -38,6 +38,7 @@
 .navbar-center {
   flex: 1;
   justify-content: center;
+  margin-bottom: -.5rem;
   text-decoration: none;
 }
 
@@ -63,6 +64,7 @@
   display: inline-block;
   padding: 0.5rem;
   border: none;
+  box-shadow: 1px 1px 1px var(--accent);
   background: #f2f2f2;
   border-radius: 5px;
   font-weight: 600;

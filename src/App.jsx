@@ -35,10 +35,8 @@ function App() {
           path="/"
           element={
             <>
-              <Home/>
+              <Home />
               <Offers />
-              <Team />
-              <Choose />
             </>
           }
         ></Route>
@@ -46,7 +44,7 @@ function App() {
           path="/about"
           element={
             <>
-              <About/>
+              <About />
               <AboutContent />
             </>
           }
