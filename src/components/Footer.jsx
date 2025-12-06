@@ -13,9 +13,9 @@ export default function Footer() {
           <div className="footer-section">
             <h3 className="footer-head title-border">VEENECT</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-              nesciunt voluptate veniam distinctio rerum! Repellendus doloribus
-              eum omnis neque beatae.
+              Veenect is a tech company delivering innovative solutions that
+              connect people and ideas. We empower businesses and individuals
+              with modern, high-quality digital services.
             </p>
 
             <div>
