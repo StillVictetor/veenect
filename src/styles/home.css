@@ -310,8 +310,14 @@ span {
 
   .home-buttons button {
     font-size: 1rem;
-    padding: 0.6rem 1.5rem 0.6rem;
+    padding: 0.6rem 1rem 0.6rem;
   }
+
+  .home-buttons .button-two {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  font-weight: 100;
+}
 }
 
 @media (max-width: 390px) {
@@ -363,6 +369,12 @@ span {
 
   .home-buttons button {
     font-size: 1rem;
-    padding: 0.6rem 1.5rem 0.6rem;
+    padding: 0.6rem 1rem 0.6rem;
   }
+
+    .home-buttons .button-two {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  font-weight: 100;
+}
 }
