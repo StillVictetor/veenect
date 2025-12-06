@@ -322,7 +322,7 @@ span {
 
 @media (max-width: 390px) {
     .home{
-  height: 100vh;
+  height: 105vh;
   background-color: #f2f2f2;
   overflow: hidden;
   }

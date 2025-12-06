@@ -200,13 +200,17 @@
 @media (max-width: 900px) {
 
   .offers-wrapper {
-  padding: 3rem 2% 3rem;
+  padding: 3rem 1% 3rem;
+  }
+
+  .offers-list {
+    gap: 2rem;
   }
 
   .offer-card {
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding: .5rem;
   }
 
   .left-img .offer-image,
