@@ -97,11 +97,25 @@ const Offers = () => {
               >
                 <div className="offer-icon">{icon}</div>
                 <h3>{name}</h3>
-                <p>{description}</p>
+                <motion.p
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: false }}
+                >
+                  {description}
+                </motion.p>
 
-                <a href="#contact" className="offer-btn">
+                <motion.a
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: false }}
+                  href="#contact"
+                  className="offer-btn"
+                >
                   Get Started →
-                </a>
+                </motion.a>
               </motion.div>
             </motion.div>
           );
