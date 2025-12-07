@@ -11,49 +11,63 @@ const AboutContent = () => {
             <img src={aboutpic} alt="About VEENECT" />
           </div>
 
-          <div className="about-text" >
+          <div className="about-text">
             <h2 className="section-title">
               About <span>VEENECT</span>
             </h2>
 
             <p>
-              VEENECT is a modern technology company founded by
-              Victor Stephen, driven by innovation, creativity,
-              and connection. Our mission is simple
-                to build digital and financial solutions that empower people and
-                businesses for the future.
+              VEENECT is a technology company founded by Victor Stephen,
+              dedicated to delivering reliable and innovative digital solutions.
+              We combine technical expertise with strategic insight to support
+              individuals and businesses in today’s rapidly evolving digital and
+              financial landscape.
             </p>
+
             <p>
-              We create advanced, user-focused products ranging from websites
-              and mobile apps to crypto and forex technology giving individuals
-              and organizations the tools they need to scale, compete, and
-              thrive in a fast-changing world.
+              Our operations focus on developing secure, efficient, and
+              high-performance platforms that enhance business processes,
+              strengthen digital presence, and enable smarter decision-making.
             </p>
+
             <p>
-              At VEENECT, we see technology as more than code. It is a
-              bridge linking ideas, people, and opportunities. That philosophy
-              shapes every solution we build:
+              As a multi-service technology provider, VEENECT offers a
+              comprehensive range of solutions, including:
             </p>
+
             <ul>
               <li>
-                <i class="bx bx-chevron-right"></i>Web & App Development → Modern,
-                high performance websites and applications that are fast,
-                secure, and built to scale.
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>Crypto Exchange Services → Secure and intuitive
-                crypto trading systems with real time data and strong
-                protection.
+                <i class="bx bx-chevron-right"></i>
+                <strong>Web & App Development</strong> → Professional, scalable,
+                and modern digital products tailored to your business needs.
               </li>
 
               <li>
-                <i class="bx bx-chevron-right"></i>Software Innovation → Custom software crafted
-                for performance, efficiency, and excellent user experience.
+                <i class="bx bx-chevron-right"></i>
+                <strong>Crypto Exchange Services</strong> → A secure and
+                simplified process for users to buy, sell, and exchange
+                cryptocurrency with confidence.
               </li>
 
               <li>
-                <i class="bx bx-chevron-right"></i>Forex Trading Solutions → Professional forex
-                trading insights, analysis, and risk-managed guidance.
+                <i class="bx bx-chevron-right"></i>
+                <strong>Software Innovation</strong> → Custom software solutions
+                and system optimizations designed to improve performance and
+                operational efficiency.
+              </li>
+
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <strong>Sales & Marketing</strong> → Strategic product promotion
+                and targeted awareness services to help brands expand reach and
+                drive measurable growth.
+              </li>
+
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <strong>Forex Education & Insights</strong> → Foundational
+                guidance and market insights to help users understand the
+                structure and dynamics of the forex market.
               </li>
             </ul>
           </div>
