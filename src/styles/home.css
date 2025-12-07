@@ -13,8 +13,8 @@ span {
   height: 100vh;
   background-color: #d9e6eb;
   overflow: hidden;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .home-content {
@@ -180,7 +180,6 @@ span {
 
   .home{
   height: 100vh;
-  background-color: #f2f2f2;
   overflow: hidden;
   }
 
@@ -233,7 +232,6 @@ span {
 
     .home{
   height: 100vh;
-  background-color: #f2f2f2;
   overflow: hidden;
   }
 
@@ -279,7 +277,6 @@ span {
 @media (max-width: 480px) {
     .home{
   height: 100vh;
-  background-color: #f2f2f2;
   overflow: hidden;
   }
 
@@ -338,7 +335,6 @@ span {
 @media (max-width: 390px) {
     .home{
   height: 105vh;
-  background-color: #f2f2f2;
   overflow: hidden;
   }
 
