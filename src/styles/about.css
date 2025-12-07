@@ -46,15 +46,16 @@ span {
 }
 
 .about {
-  background-color: #fff;
+  background-color: #d9e6eb;
   color: #000;
-  padding: 3rem 7% 3rem;
+  padding: 1rem 7% 1rem;
   text-align: center;
-  min-height: 70vh;
+  min-height: 50vh;
   font-family: "Inter", sans-serif;
 }
 
 .about .about-container {
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
@@ -81,11 +82,15 @@ span {
 }
 
 .about .section-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
-  font-family: "Space Grotesk", sans-serif;
-  text-align: center;
+  font-weight: 500;
+  font-family: "Hexco", sans-serif;
+  text-align: left;
+}
+
+.about .about-text span {
+  font-family: "Hexco", sans-serif;
 }
 
 .about .about-text {
@@ -93,61 +98,82 @@ span {
   line-height: 1.6;
   font-weight: 500;
   text-align: left;
-  background-color: transparent;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-top-right-radius: 50px;
   padding: 1rem;
   font-family: "Inter", sans-serif;
 }
 
-.about .about-text ul {
+.about-text .button-two {
   margin-top: 1rem;
-  list-style-type: none;
-  padding-left: 1.5rem;
-}
-
-.about-expandable {
-  max-height: none;
-  overflow: visible;
-  opacity: 1;
-}
-
-.read-more-btn {
+  position: relative;
   display: inline-block;
-  padding: .7rem 1.8rem;
-  background: linear-gradient(135deg, #4aa3d8, #1e7eb5);
-  border-radius: 8px;
-  color: #fff;
-  margin: 1rem 4.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .4s;
-  cursor: pointer;
+  padding: 0.5rem;
   border: none;
-  transition: all 0.3s ease-in-out;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-weight: 500;
+  color: #000;
+  font-family: "Hexco", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 20;
 }
 
-.read-more-btn:hover {
-  background: linear-gradient(135deg, #1e7eb5, #4aa3d8);
-  transform: translateX(8px);
+.about-text .button-two::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1;
+  transition:
+    left 0.5s ease-in-out,
+    visibility 0.3s ease;
 }
 
-.read-more-btn:active {
-  transform: translateY(0);
+.about-text .button-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-/* Desktop: hide button, show all content */
-@media (min-width: 769px) {
-  .read-more-btn {
-    display: none;
-  }
+.about-text .button-two:hover,
+.about-text .button-two:focus,
+.about-text .button-two:active {
+  color: #fff;
+}
 
-  .about-expandable {
-    max-height: none;
-    overflow: visible;
-    opacity: 1;
-  }
+.about-text .button-two:hover::before,
+.about-text .button-two:focus::before,
+.about-text .button-two:active::before {
+  left: 0;
+  visibility: visible;
+}
+
+.about-text .button-two.style-2 {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 30px;
+}
+
+.about-text .button-two.style-2{
+  text-decoration: none;
+  font-size: .90rem;
+  color: #000;
 }
 
 @media (max-width: 768px) {
@@ -176,16 +202,6 @@ span {
     margin-top: 5rem;
   }
 
-  .home-buttons {
-    gap: 1rem;
-  }
-
-  .home-buttons button {
-    width: 50%;
-    font-size: 1rem;
-    padding: 0.6rem 1.5rem 0.6rem;
-  }
-
   .about .about-container {
     grid-template-columns: 1fr;
   }
@@ -196,21 +212,8 @@ span {
   }
 
   .about .about-text {
-    text-align: left;
+    text-align: justify;
+    
   }
 
-  /* Show Read More button on mobile */
-  .read-more-btn {
-    display: inline-block;
-  }
-
-  /* Keep expanded section hidden on mobile until clicked */
-  .about-expandable {
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .about-expandable.expanded {
-    max-height: 800px;
-  }
 }

@@ -1,0 +1,142 @@
+.features-section{
+    padding: 1rem 4% 1rem;
+    background-color: #d9e6eb;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.features-head{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: "Hexco", sans-serif;
+    color: #000;
+}
+
+.features-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    align-items: center;
+}
+
+.features-container{
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card .feature-text{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.features-wrapper .button-two {
+  margin-top: 1rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  border: none;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-weight: 500;
+  color: #000;
+  font-family: "Hexco", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 20;
+}
+
+.features-wrapper .button-two::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1;
+  transition:
+    left 0.5s ease-in-out,
+    visibility 0.3s ease;
+}
+
+.features-wrapper .button-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.features-wrapper .button-two:hover,
+.features-wrapper .button-two:focus,
+.features-wrapper .button-two:active {
+  color: #fff;
+}
+
+.features-wrapper .button-two:hover::before,
+.features-wrapper .button-two:focus::before,
+.features-wrapper .button-two:active::before {
+  left: 0;
+  visibility: visible;
+}
+
+.features-wrapper .button-two.style-2 {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 30px;
+}
+
+.features-wrapper .button-two.style-2{
+  text-decoration: none;
+  font-size: .90rem;
+  color: #000;
+}
+
+.features-wrapper .features-image{
+  width: 40vw;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.features-wrapper .features-image img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.6s ease;
+}
+
+.features-wrapper .features-image img:hover{
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .features-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .features-wrapper .features-image {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

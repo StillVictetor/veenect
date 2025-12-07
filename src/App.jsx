@@ -9,6 +9,7 @@ import Footer from './components/Footer.jsx'
 import Team from "./components/Team.jsx";
 import About from "./components/About.jsx";
 import AboutContent from "./components/AboutContent.jsx";
+import Features from "./components/Features.jsx";
 
 
 
@@ -37,6 +38,9 @@ function App() {
             <>
               <Home />
               <Offers />
+              <AboutContent/>
+              <Choose />
+              <Features/>
             </>
           }
         ></Route>

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/home.css'
 import {motion} from 'framer-motion'
-import bgImage from '../assets/veenectbg-removebg-preview.png'
+import bgImage from '../assets/veenecthero-removebg-preview.png'
 
 const Home = () => {
   return (
@@ -12,6 +12,7 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
+          className="home-text"
         >
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
