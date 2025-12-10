@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "../styles/onboarding.css";
 
-export default function Onboarding() {
-  const navigate = useNavigate();
+// Keep onboarding as a presentational overlay. It no longer navigates.
+// Parent can pass an onClose callback to hide it (e.g. setShowOnboarding(false)).
+export default function Onboarding({ onClose }) {
   const [exit, setExit] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setExit(true);
-      setTimeout(() => navigate("/"), 1200);
+      // After exit animation finishes, tell parent to hide the overlay.
+      setTimeout(() => {
+        if (typeof onClose === "function") onClose();
+      }, 1200);
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, [navigate]);
+  }, [onClose]);
 
   return (
     <div className={`onboarding-container ${exit ? "exit" : ""}`}>

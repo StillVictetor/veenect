@@ -18,6 +18,7 @@
   opacity: 1;
   animation: fadeInScreen var(--fade-duration) ease-out forwards;
   position: relative;
+  z-index: 300;
 }
 
 /* EXIT ANIMATION */

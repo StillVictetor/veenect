@@ -25,13 +25,12 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (showOnboarding) {
-    return <OnboardingScreen />;
-  }
-
   return (
     <>
       <Navbar />
+      {showOnboarding && (
+        <OnboardingScreen onClose={() => setShowOnboarding(false)} />
+      )}
       <Routes>
         <Route
           path="/"
