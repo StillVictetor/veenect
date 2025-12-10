@@ -2,8 +2,8 @@ import React from "react";
 import { Bot } from "lucide-react";
 import "../styles/whatsapp-chat.css";
 
-const phone = "2347035731997"; // Your WhatsApp number, no + or leading zero
-const message = "hi";
+const phone = "2347035731997"; 
+const message = "Hello VEENECT! I would like to inquire about your services.";
 const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
   message
 )}`;
