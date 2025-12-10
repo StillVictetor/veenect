@@ -5,15 +5,14 @@ import OnboardingScreen from "./components/onboarding.jsx";
 import Home from "./components/Home.jsx";
 import Offers from "./components/Offers.jsx";
 import Choose from "./components/Choose.jsx";
-import Footer from './components/Footer.jsx'
+import Footer from "./components/Footer.jsx";
 import Team from "./components/Team.jsx";
 import About from "./components/About.jsx";
 import AboutContent from "./components/AboutContent.jsx";
 import Features from "./components/Features.jsx";
 import Client from "./components/Client.jsx";
 import Contact from "./components/Contact.jsx";
-
-
+import Chat from "./components/Chat.jsx";
 
 function App() {
   const [showOnboarding, setShowOnboarding] = useState(true);
@@ -41,6 +40,7 @@ function App() {
               <Home />
               <Offers />
               <AboutContent bgColor="#d9e6eb" />
+              <Chat />
               <Choose />
               <Features bgColor="#d9e6eb" />
             </>
@@ -51,17 +51,22 @@ function App() {
           element={
             <>
               <About />
+              <Chat />
               <AboutContent bgColor="#fff" />
               <Features bgColor="#fff" />
               <Client />
             </>
           }
         ></Route>
-        <Route path="/contact" element={
-          <>
-          <Contact/>
-          </>
-        }></Route>
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Contact />
+              <Chat />
+            </>
+          }
+        ></Route>
       </Routes>
       <Footer />
     </>

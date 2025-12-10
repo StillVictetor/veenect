@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+// import React, { useState } from "react};
 import "../styles/contact.css";
 import { motion as Motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -80,7 +80,7 @@ const Contact = () => {
           viewport={{ once: false }}
         >
           <form
-            action="https://formsubmit.co/veenect1@gmail.com"
+            action="https://formspree.io/f/mdklyzly"
             method="POST"
             className="contact-form"
           >
