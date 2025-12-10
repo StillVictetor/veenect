@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span {
+  color: #007bff;
+}
+
+.contact-section {
+  height: 70vh;
+  background-color: #d9e6eb;
+  padding: 5rem 5% 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  text-align: center;
+}
+
+.contact-section .head{
+    z-index: 5;
+}
+
+.contact-section h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-right: -12rem;
+  font-family: "Hexco", sans-serif;
+}
+
+.contact-section .image {
+  width: 35vw;
+  overflow: hidden;
+}
+
+.contact-section .image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.contact-section .image img:hover {
+  transform: scale(1.05);
+}
+
+.contact-section span {
+  color: #007bff;
+  font-family: "Hexco", sans-serif;
+}
+
+.contact-boxes {
+  background-color: #fff;
+  color: #000;
+  padding: 3rem 7% 3rem;
+  text-align: center;
+  min-height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  font-family: "Inter", sans-serif;
+}
+
+.contact-box{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box a {
+    background-color: #007bff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    transition: background-color 0.3s ease, color 0.3s ease
+}
+
+.contact-box a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.contact-box h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    font-family: "Hexco", sans-serif;
+}
+
+.contact-box p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.contact-box span{
+    font-family: "Hexco", sans-serif;
+}
+
+.contact .form-image-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  padding: 3rem 7% 3rem;
+  gap: 2rem;
+}
+
+.contact .form-image-section .contact-form {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+  font-family: "Inter", sans-serif;
+}
+
+.contact .form-group textarea {
+  height: 150px;
+}
+
+.contact .form-group input:focus,
+.contact .form-group textarea:focus {
+  border-color: #007bff;
+}
+
+
+
+.contact .button-two {
+  margin-top: .3rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  align-items: center;
+  border: none;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-weight: 100;
+  color: #666;
+  letter-spacing: .05rem;
+  font-family: "Hexco", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 20;
+}
+
+.contact .button-two::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1;
+  transition:
+    left 0.5s ease-in-out,
+    visibility 0.3s ease;
+}
+
+.contact .button-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.contact .button-two:hover,
+.contact .button-two:focus,
+.contact .button-two:active {
+  color: #fff;
+}
+
+.contact .button-two:hover::before,
+.contact .button-two:focus::before,
+.contact .button-two:active::before {
+  left: 0;
+  visibility: visible;
+}
+
+.contact .button-two.style-3 {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 30px;
+}
+
+.contact .button-two.style-3{
+  text-decoration: none;
+  font-size: .90rem;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 3rem 5% 0;
+    text-align: center;
+  }
+
+  .contact-section .image {
+  width: 80vw;
+  overflow: hidden;
+  margin: 0 auto;
+  }
+
+  .contact-section h1 {
+    font-size: 3rem;
+    margin-right: 0;
+  }
+
+  .contact .form-image-section {
+    grid-template-columns: 1fr;
+    padding: 2rem 5% 2rem;
+  }
+
+  .contact-boxes {
+    padding: 2rem 3% 2rem;
+  }
+
+  .contact .form-image-section .contact-form {
+    margin-top: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section h1 {
+    font-size: 2.5rem;
+  }
+}

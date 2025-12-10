@@ -4,7 +4,7 @@ import { motion as Motion } from 'framer-motion'
 import { CheckCheckIcon, CheckCircleIcon } from 'lucide-react'
 import featureimg from '../assets/featuresimg.png'
 
-const Features = () => {
+const Features = ({bgColor}) => {
 
     const features = [
       {
@@ -35,7 +35,7 @@ const Features = () => {
     ];
 
   return (
-    <div className="features-section">
+    <div className="features-section" style={{backgroundColor: bgColor}}>
       <div>
         <div className="features-wrapper">
           <div className="features-content">

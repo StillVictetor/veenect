@@ -27,7 +27,9 @@ export default function Navbar() {
         </div>
 
         <button className="button-two style-2" data-text="Get Started">
-          <Link to="/get-started" className="btn" >Get Started</Link>
+          <Link to="/get-started" className="btn">
+            Get Started
+          </Link>
         </button>
 
         {/* <div className="navbar-right">
@@ -75,6 +77,17 @@ export default function Navbar() {
               data-text="About Us"
             >
               About
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="button-one style-2"
+              data-text="Contact Us"
+            >
+              Contact
             </Link>
           </li>
         </ul>

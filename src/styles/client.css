@@ -1,0 +1,246 @@
+.client-section {
+  width: 100%;
+  padding: 3rem 5% 3rem;
+  background: #d9e6eb;
+  text-align: center;
+}
+
+.client-tag {
+  color: #007bff;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.client-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.client-sub {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* SLIDER WRAPPER */
+.client-slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* Testimonial card */
+.client-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* Active (center card) */
+.activeSlide {
+  opacity: 1;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Next slide (right) */
+.nextSlide {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Previous slide (left) for smooth looping */
+.lastSlide {
+  transform: translateX(-200%);
+  opacity: 0;
+}
+
+/* Avatar */
+.client-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+/* Text */
+.client-text {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Name + role */
+.client-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.client-role {
+  color: #777;
+  font-size: 14px;
+}
+
+/* ===== DOTS ===== */
+.client-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.client-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.client-dots .dot.activeDot {
+  background: #007bff;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .client-title {
+    font-size: 28px;
+  }
+
+  .client-sub {
+    max-width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .client-card {
+    width: 80%;
+    padding: 30px 20px;
+  }
+
+  .client-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .client-name {
+    font-size: 18px;
+  }
+
+  .client-role {
+    font-size: 13px;
+  }
+
+    .client-title {
+    font-size: 28px;
+  }
+
+  .client-sub {
+    max-width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .client-card {
+    width: 80%;
+    padding: 30px 20px;
+  }
+
+  .client-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .client-name {
+    font-size: 18px;
+  }
+
+  .client-role {
+    font-size: 13px;
+  }
+
+  .client-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  .client-title {
+    font-size: 24px;
+  }
+
+  .client-sub {
+    max-width: 95%;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  .client-card {
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .client-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .client-name {
+    font-size: 16px;
+  }
+
+  .client-role {
+    font-size: 12px;
+  }
+
+    .client-title {
+    font-size: 24px;
+  }
+
+  .client-sub {
+    max-width: 95%;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  .client-card {
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .client-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .client-name {
+    font-size: 16px;
+  }
+
+  .client-role {
+    font-size: 12px;
+  }
+
+  .client-dots .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}

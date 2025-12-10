@@ -70,7 +70,7 @@ export default function Footer() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: false }}
               >
-                <Link to="/checkout">About Us</Link>
+                <Link to="/about">About Us</Link>
               </Motion.li>
 
               <Motion.li
@@ -79,7 +79,7 @@ export default function Footer() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: false }}
               >
-                <Link to="/checkout">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
               </Motion.li>
             </ul>
           </div>

@@ -3,10 +3,10 @@ import "../styles/about.css"
 import aboutimg from "../assets/veenectlogo1.png"
 import { motion as Motion } from 'framer-motion'
 
-const AboutContent = () => {
+const AboutContent = ({bgColor}) => {
   return (
     <div>
-      <section className="about" id="about">
+      <section className="about" style={{backgroundColor: bgColor}} id="about">
         <div className="about-container">
           <div className="about-text">
             <h2 className="section-title">

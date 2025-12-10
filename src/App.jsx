@@ -10,6 +10,8 @@ import Team from "./components/Team.jsx";
 import About from "./components/About.jsx";
 import AboutContent from "./components/AboutContent.jsx";
 import Features from "./components/Features.jsx";
+import Client from "./components/Client.jsx";
+import Contact from "./components/Contact.jsx";
 
 
 
@@ -38,9 +40,9 @@ function App() {
             <>
               <Home />
               <Offers />
-              <AboutContent/>
+              <AboutContent bgColor="#d9e6eb" />
               <Choose />
-              <Features/>
+              <Features bgColor="#d9e6eb" />
             </>
           }
         ></Route>
@@ -49,10 +51,17 @@ function App() {
           element={
             <>
               <About />
-              <AboutContent />
+              <AboutContent bgColor="#fff" />
+              <Features bgColor="#fff" />
+              <Client />
             </>
           }
         ></Route>
+        <Route path="/contact" element={
+          <>
+          <Contact/>
+          </>
+        }></Route>
       </Routes>
       <Footer />
     </>
