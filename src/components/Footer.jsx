@@ -1,22 +1,32 @@
 import React from "react";
 import "../styles/footer.css";
 import { Link } from "react-router-dom";
+import { motion as Motion } from "framer-motion";
 import pay from '../assets/react.svg'
 
 export default function Footer() {
   return (
     <footer>
-      {/* MAIN FOOTER */}
-      <div className="footer-area">
+      <Motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        className="footer-area"
+      >
         <div className="footer-container">
-          {/* CONTACT */}
           <div className="footer-section">
             <h3 className="footer-head title-border">VEENECT</h3>
-            <p>
+            <Motion.p
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               Veenect is a tech company delivering innovative solutions that
               connect people and ideas. We empower businesses and individuals
               with modern, high-quality digital services.
-            </p>
+            </Motion.p>
 
             <div>
               <button className="btn">Call Us →</button>
@@ -24,47 +34,94 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ACCOUNTS */}
           <div className="footer-section">
             <h3 className="footer-title title-border">Quick Links</h3>
             <ul className="footer-menu">
-              <li>
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <Link to="/">Home</Link>
-              </li>
-              <li>
+              </Motion.li>
+
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <Link to="/shop">Our Team</Link>
-              </li>
-              <li>
+              </Motion.li>
+
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <Link to="/about">Blogs</Link>
-              </li>
-              <li>
+              </Motion.li>
+
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <Link to="/checkout">About Us</Link>
-              </li>
-              <li>
+              </Motion.li>
+
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <Link to="/checkout">Contact Us</Link>
-              </li>
+              </Motion.li>
             </ul>
           </div>
 
-          {/* SHIPPING */}
           <div className="footer-section">
             <h3 className="footer-title title-border">Services</h3>
             <ul className="footer-menu">
-              <li>
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <a href="#">Web / App Developer</a>
-              </li>
-              <li>
+              </Motion.li>
+
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <a href="#">Forex Teaching / Mentorship</a>
-              </li>
-              <li>
+              </Motion.li>
+
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <a href="#">Sales / Marketing</a>
-              </li>
-              <li>
-                <a href="#">Crypto Exchange Services</a>
-              </li>
-              <li>
+              </Motion.li>
+
+              <Motion.li
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
                 <a href="#">Software Innovation</a>
-              </li>
+              </Motion.li>
             </ul>
           </div>
 
@@ -84,7 +141,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-      </div>
+      </Motion.div>
 
       {/* COPYRIGHT */}
       <div className="copyright-area">

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/features.css'
+import { motion as Motion } from 'framer-motion'
 import { CheckCheckIcon, CheckCircleIcon } from 'lucide-react'
 import featureimg from '../assets/featuresimg.png'
 
@@ -11,23 +12,23 @@ const Features = () => {
         text: "Web/App Development",
         icon: <CheckCircleIcon size={20} color="#007BFF" />,
       },
+    //   {
+    //     id: 2,
+    //     text: "Crypto Exchange Services",
+    //     icon: <CheckCircleIcon size={25} color="#007BFF" />,
+    //   },
       {
         id: 2,
-        text: "Crypto Exchange Services",
-        icon: <CheckCircleIcon size={25} color="#007BFF" />,
-      },
-      {
-        id: 3,
         text: "Software Innovation",
         icon: <CheckCircleIcon size={25} color="#007BFF" />,
       },
       {
-        id: 4,
+        id: 3,
         text: "Sales/Marketing",
         icon: <CheckCircleIcon size={25} color="#007BFF" />,
       },
       {
-        id: 5,
+        id: 4,
         text: "Forex Trading",
         icon: <CheckCircleIcon size={25} color="#007BFF" />,
       },
@@ -38,7 +39,13 @@ const Features = () => {
       <div>
         <div className="features-wrapper">
           <div className="features-content">
-            <div className="features-container">
+            <Motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              className="features-container"
+            >
               <div className="features-head">
                 <h3 className="features-heading">
                   {" "}
@@ -49,12 +56,19 @@ const Features = () => {
                 </h2>
               </div>
               {features.map(({ id, text, icon }) => (
-                <div key={id} className="feature-card">
+                <Motion.div
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: false }}
+                  key={id}
+                  className="feature-card"
+                >
                   <div className="feature-icon">{icon}</div>
                   <p className="feature-text">{text}</p>
-                </div>
+                </Motion.div>
               ))}
-            </div>
+            </Motion.div>
             <button className="button-two style-2" data-text="Lets talk!">
               Lets talk!
             </button>

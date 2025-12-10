@@ -9,7 +9,7 @@ import {
   PlusIcon
 } from "lucide-react";
 import chooseimg from "../assets/chooseimg.jfif"
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 // Accordion panel data
 const panels = [
@@ -62,21 +62,21 @@ const Choose = () => {
         We Achieved People's Trust by Our <br /> Great Service
       </p>
       <div className="choose-container">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: .90, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <Motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: false }}
           className="choose-image"
         >
           <img src={chooseimg} alt="chooseus" />
-        </motion.div>
+        </Motion.div>
         <div className="accordion-1" id="accordion">
           {panels.map((panel) => (
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
+            <Motion.div
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: false }}
               className="panel"
               key={panel.id}
@@ -151,7 +151,7 @@ const Choose = () => {
               >
                 <div className="accor-content">{panel.content}</div>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
