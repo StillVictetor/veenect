@@ -6,13 +6,14 @@ import {
   BitcoinIcon,
   SettingsIcon,
   ChartLineIcon,
-  ShoppingCartIcon
+  ShoppingCartIcon,
 } from "lucide-react";
-import webimg from '../assets/webdev.jfif'
+import webimg from "../assets/webdev.jfif";
 // import cryptoimg from '../assets/exchange3.jfif'
-import softwareimg from '../assets/software1.jfif'
-import foreximg from '../assets/forex1.jfif'
-import Salesimg from '../assets/Salesimg.jfif'
+import softwareimg from "../assets/software1.jfif";
+import foreximg from "../assets/forex1.jfif";
+import Salesimg from "../assets/Salesimg.jfif";
+import { Link } from "react-router-dom";
 
 const Offers = () => {
   const data = [
@@ -59,7 +60,7 @@ const Offers = () => {
   ];
 
   return (
-    <div className="offers-wrapper">
+    <div id="offers" className="offers-wrapper">
       <h2 className="offers-heading">What We Offer Our Clients</h2>
       <h3 className="offers-p">
         These are what <br /> we offer to our Clients
@@ -106,16 +107,34 @@ const Offers = () => {
                   {description}
                 </Motion.p>
 
-                <Motion.a
+                <Motion.div
                   initial={{ opacity: 0, y: 60 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: false }}
-                  href="#contact"
-                  className="offer-btn"
                 >
-                  Get Started →
-                </Motion.a>
+                  {/* Link to dedicated, editable offer pages */}
+                  {id === 1 && (
+                    <Link to="/offers/web-app" className="offer-btn">
+                      Learn More →
+                    </Link>
+                  )}
+                  {id === 2 && (
+                    <Link to="/offers/software" className="offer-btn">
+                      Learn More →
+                    </Link>
+                  )}
+                  {id === 3 && (
+                    <Link to="/offers/sales" className="offer-btn">
+                      Learn More →
+                    </Link>
+                  )}
+                  {id === 4 && (
+                    <Link to="/offers/forex" className="offer-btn">
+                      Learn More →
+                    </Link>
+                  )}
+                </Motion.div>
               </Motion.div>
             </Motion.div>
           );

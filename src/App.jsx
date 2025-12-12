@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
 import Offers from "./components/Offers.jsx";
@@ -12,8 +12,28 @@ import Features from "./components/Features.jsx";
 import Client from "./components/Client.jsx";
 import Contact from "./components/Contact.jsx";
 import Chat from "./components/Chat.jsx";
+import WebApp from "./pages/offers/WebApp.jsx";
+import Software from "./pages/offers/Software.jsx";
+import Sales from "./pages/offers/Sales.jsx";
+import Forex from "./pages/offers/Forex.jsx";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // If URL includes a hash like #offers, scroll to that element smoothly.
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        // slight delay to allow components to mount
+        setTimeout(
+          () => el.scrollIntoView({ behavior: "smooth", block: "start" }),
+          50
+        );
+      }
+    }
+  }, [location]);
   return (
     <>
       <Navbar />
@@ -43,6 +63,10 @@ function App() {
             </>
           }
         ></Route>
+        <Route path="/offers/web-app" element={<WebApp />} />
+        <Route path="/offers/software" element={<Software />} />
+        <Route path="/offers/sales" element={<Sales />} />
+        <Route path="/offers/forex" element={<Forex />} />
         <Route
           path="/contact"
           element={

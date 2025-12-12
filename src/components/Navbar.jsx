@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
-import { Menu, MenuIcon, X } from "lucide-react";
-import { Link } from "react-router-dom";;
+import { Menu, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,23 +20,19 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-center">
-          <a href="/">
-            {" "}
+          <Link to="/" className="brand-link">
             <h2>VEENECT</h2>
-          </a>
+          </Link>
         </div>
 
-        <button className="button-two style-2" data-text="Get Started">
-          <Link to="/get-started" className="btn">
-            Get Started
-          </Link>
-        </button>
-
-        {/* <div className="navbar-right">
-          <Link to="/get-started" className="btn">
-            Get Started
-          </Link>
-        </div> */}
+        {/* Make the CTA a Link styled as a button instead of nesting Link inside a button */}
+        <Link
+          to="/#offers"
+          className="button-two style-2 btn"
+          data-text="Get Started"
+        >
+          Get Started
+        </Link>
       </nav>
 
       {/* Overlay */}
@@ -88,6 +84,50 @@ export default function Navbar() {
               data-text="Contact Us"
             >
               Contact
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="button-one style-2"
+              data-text="Blogs"
+            >
+              Blogs
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="button-one style-2"
+              data-text="Terms & Conditions"
+            >
+              Terms & Conditions
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="button-one style-2"
+              data-text="Privacy Policy"
+            >
+              Privacy Policy
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="button-one style-2"
+              data-text="FAQ"
+            >
+              FAQ
             </Link>
           </li>
         </ul>
