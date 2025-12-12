@@ -10,7 +10,7 @@ span {
 
 .contact-section {
   height: 70vh;
-  background-color: #d9e6eb;
+  background-color: #fff;
   padding: 5rem 5% 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
