@@ -63,10 +63,36 @@ function App() {
             </>
           }
         ></Route>
-        <Route path="/offers/web-app" element={<WebApp />} />
-        <Route path="/offers/software" element={<Software />} />
-        <Route path="/offers/sales" element={<Sales />} />
-        <Route path="/offers/forex" element={<Forex />} />
+        <Route
+          path="/offers/web-app"
+          element={
+            <>
+              <WebApp />
+              <Chat />
+            </>
+          }
+        />
+        <Route
+          path="/offers/software"
+          element={
+            <>
+              <Software />
+              <Chat />
+            </>
+          }
+        />
+        <Route path="/offers/sales" element={
+          <>
+          <Sales />
+          <Chat />
+          </>
+        } />
+        <Route path="/offers/forex" element={
+          <>
+          <Forex />
+          <Chat />
+          </>
+        } />
         <Route
           path="/contact"
           element={
