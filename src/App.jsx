@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-import OnboardingScreen from "./components/onboarding.jsx";
 import Home from "./components/Home.jsx";
 import Offers from "./components/Offers.jsx";
 import Choose from "./components/Choose.jsx";
@@ -15,22 +14,9 @@ import Contact from "./components/Contact.jsx";
 import Chat from "./components/Chat.jsx";
 
 function App() {
-  const [showOnboarding, setShowOnboarding] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowOnboarding(false);
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <Navbar />
-      {showOnboarding && (
-        <OnboardingScreen onClose={() => setShowOnboarding(false)} />
-      )}
       <Routes>
         <Route
           path="/"
