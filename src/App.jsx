@@ -16,6 +16,7 @@ import WebApp from "./pages/offers/WebApp.jsx";
 import Software from "./pages/offers/Software.jsx";
 import Sales from "./pages/offers/Sales.jsx";
 import Forex from "./pages/offers/Forex.jsx";
+import ContactContent from "./components/ContactContent.jsx";
 
 function App() {
   const location = useLocation();
@@ -69,6 +70,7 @@ function App() {
             <>
               <WebApp />
               <Chat />
+              <ContactContent/>
             </>
           }
         />

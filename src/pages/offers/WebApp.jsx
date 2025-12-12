@@ -31,7 +31,9 @@ export default function WebApp() {
               transition={{ duration: 0.5 }}
               viewport={{ once: false }}
               key={id}
-              className={`offer-card ${isLeft ? "left-img" : "right-img"}`}
+              className={`offer-card offer-cardone ${
+                isLeft ? "left-img" : "right-img"
+              }`}
             >
               <Motion.div
                 initial={{ opacity: 0, y: 60 }}
@@ -57,16 +59,37 @@ export default function WebApp() {
           );
         })}
       </div>
+      <div className="details-page" >
+        <h1 className="offers-heading head">Web / App Development</h1>
+        <p className="offers-paragraph">
+          We craft dynamic websites and applications tailored specifically for
+          your business needs. Our goal is to help your brand grow by delivering
+          seamless, high-performing digital solutions that engage your customers
+          and enhance your online presence. With our web and app development
+          services, we focus on creating user-friendly interfaces that are both
+          visually appealing and functional. Every project we undertake is
+          designed to ensure smooth navigation, fast load times, and
+          compatibility across all devices, so your customers can interact with
+          your business effortlessly. Beyond aesthetics, we build solutions that
+          are scalable and adaptable, allowing your website or app to grow
+          alongside your business. From small startups to established companies,
+          our digital products are engineered to optimize workflow, improve
+          customer engagement, and drive measurable results. Our process begins
+          with understanding your business goals and target audience, followed
+          by meticulous planning, designing, and development. Throughout the
+          project, we ensure clear communication, timely updates, and thorough
+          testing to guarantee a polished final product. By partnering with us,
+          your brand gains more than just a website or app; you gain a powerful
+          tool that increases visibility, boosts credibility, and provides your
+          customers with an exceptional experience. Let us help you transform
+          your ideas into reality, and take your business to the next level with
+          modern, reliable digital solutions.
+        </p>
 
-
-      <h1 className="offers-heading">Web / App Development</h1>
-      <p className="offers-p">
-        Detailed information about our Web and App Development services. You can
-        expand this page with case studies, pricing, process, and media.
-      </p>
-      <Link to="/#offers" className="offer-btn">
-        Back to home
-      </Link>
+        <Link to="/#offers" className="offer-btn">
+          Back to home
+        </Link>
+      </div>
     </div>
   );
 }

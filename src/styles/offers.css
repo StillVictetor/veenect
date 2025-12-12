@@ -18,6 +18,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.offers-heading.head{
+  text-align: center;
+}
+
 .offers-p{
   font-size: 36px;
   font-weight: 800;
@@ -49,6 +53,10 @@
   opacity: 0;
   transform: translateY(80px) scale(.98);
   animation: revealCard 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.offer-cardone{
+  margin-top: 2rem;
 }
 
 /* Animated entrance for each card (GSAP-like) */
@@ -160,6 +168,19 @@
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   line-height: 1.7;
+}
+
+.offers-paragraph {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2rem;
+  text-align: justify;
+  line-height: 1.9;
+}
+
+.details-page{
+  padding: 0 7% 0;
 }
 
 /* ICON */

@@ -32,7 +32,9 @@ export default function Software() {
               transition={{ duration: 0.5 }}
               viewport={{ once: false }}
               key={id}
-              className={`offer-card ${isLeft ? "left-img" : "right-img"}`}
+              className={`offer-card offer-cardone ${
+                isLeft ? "left-img" : "right-img"
+              }`}
             >
               <Motion.div
                 initial={{ opacity: 0, y: 60 }}
