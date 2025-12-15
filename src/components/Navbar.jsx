@@ -12,27 +12,54 @@ export default function Navbar() {
         <div className="navbar-left">
           <button
             className="icon-btn1"
-            onClick={() => setOpen(true)}
-            aria-label="Open menu"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="site-menu"
           >
             <Menu size={30} color="#000" style={{ cursor: "pointer" }} />
           </button>
         </div>
 
+        
         <div className="navbar-center">
           <Link to="/" className="brand-link">
             <h2>VEENECT</h2>
           </Link>
         </div>
 
-        {/* Make the CTA a Link styled as a button instead of nesting Link inside a button */}
-        <Link
+        {/* Desktop nav links (hidden on small screens) */}
+        <div className="nav-links">
+          <NavLink to="/" className="nav-link">
+            Home
+          </NavLink>
+          <NavLink to="/about" className="nav-link">
+            About
+          </NavLink>
+          <NavLink to="/contact" className="nav-link">
+            Contact
+          </NavLink>
+          <NavLink to="/blogs" className="nav-link">
+            Blogs
+          </NavLink>
+          <NavLink to="/terms" className="nav-link">
+            Terms
+          </NavLink>
+          <NavLink to="/privacy" className="nav-link">
+            Privacy
+          </NavLink>
+          <NavLink to="/faq" className="nav-link">
+            FAQ
+          </NavLink>
+        </div>
+
+        <NavLink
           to="/#offers"
           className="button-two style-2 btn"
           data-text="Get Started"
         >
           Get Started
-        </Link>
+        </NavLink>
       </nav>
 
       {/* Overlay */}
