@@ -26,7 +26,8 @@ span {
   font-weight: bold;
   z-index: 5;
   pointer-events: none; 
-  padding: 9rem 5% 2rem;
+  /* line-height: 5rem; */
+  padding: 7rem 5% 2rem;
 }
 
 .home-content * {
@@ -64,7 +65,7 @@ span {
 
 .home-content h1 {
   font-size: 4.5rem;
-  line-height: .93;
+  line-height: 1.1;
   font-weight: 100;
   margin-bottom: 3rem;
   margin-top: 1rem;
