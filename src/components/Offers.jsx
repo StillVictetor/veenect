@@ -11,7 +11,7 @@ import {
 import webimg from "../assets/webdev.jfif";
 // import cryptoimg from '../assets/exchange3.jfif'
 import softwareimg from "../assets/software1.jfif";
-import foreximg from "../assets/forex1.jfif";
+// import foreximg from "../assets/forex1.jfif";
 import Salesimg from "../assets/Salesimg.jfif";
 import { Link } from "react-router-dom";
 
@@ -49,14 +49,14 @@ const Offers = () => {
         "Veenect helps business grow by promoting and selling their products effectively , reaching the right audience, and driving real results.",
       src: Salesimg,
     },
-    {
-      id: 4,
-      name: "Forex Trading",
-      icon: <ChartLineIcon size={35} />,
-      description:
-        "Veenect offers expert mentorship, trading signals, and investment opportunities, guiding clients to navigate the forex market confidently.",
-      src: foreximg,
-    },
+    // {
+    //   id: 4,
+    //   name: "Forex Trading",
+    //   icon: <ChartLineIcon size={35} />,
+    //   description:
+    //     "Veenect offers expert mentorship, trading signals, and investment opportunities, guiding clients to navigate the forex market confidently.",
+    //   src: foreximg,
+    // },
   ];
 
   return (

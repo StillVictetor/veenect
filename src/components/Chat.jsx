@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Bot, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import "../styles/whatsapp-chat.css";
 
 const phone = "2347035731997";
@@ -49,7 +50,7 @@ export default function Chat() {
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
         >
-          <Bot size={28} />
+          <FaWhatsapp size={28} />
         </a>
       </div>
     </>

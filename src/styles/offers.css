@@ -175,12 +175,12 @@
   font-weight: 600;
   color: #000;
   margin-bottom: 2rem;
-  text-align: justify;
+  text-align: left;
   line-height: 1.6;
 }
 
 .details-page{
-  padding: 0 7% 0;
+  padding: 0 5% 0;
 }
 
 /* ICON */
@@ -197,6 +197,12 @@
 
 .offer-card:hover .offer-icon {
   transform: scale(1.15) rotate(4deg);
+}
+
+.buttons{
+  display: flex;
+  gap: 1.59rem;
+  margin-bottom: 1rem;
 }
 
 /* BUTTON */

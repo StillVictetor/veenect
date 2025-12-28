@@ -17,6 +17,7 @@ import Software from "./pages/offers/Software.jsx";
 import Sales from "./pages/offers/Sales.jsx";
 import Forex from "./pages/offers/Forex.jsx";
 import ContactContent from "./components/ContactContent.jsx";
+import Promote from "./pages/Promote.jsx";
 
 function App() {
   const location = useLocation();
@@ -37,75 +38,108 @@ function App() {
   }, [location]);
   return (
     <>
-      <Navbar />
       <Routes>
         <Route
           path="/"
           element={
             <>
+              <Navbar />
               <Home />
               <Offers />
               <AboutContent bgColor="#d9e6eb" />
               <Chat />
               <Choose />
               <Features bgColor="#d9e6eb" />
+              <Footer />
             </>
           }
-        ></Route>
+        />
+
         <Route
           path="/about"
           element={
             <>
+              <Navbar />
               <About />
               <Chat />
               <AboutContent bgColor="#fff" />
               <Features bgColor="#fff" />
               <Client />
+              <Footer />
             </>
           }
-        ></Route>
+        />
+
         <Route
           path="/offers/web-app"
           element={
             <>
+              <Navbar />
               <WebApp />
               <Chat />
-              <ContactContent/>
+              <ContactContent />
+              <Footer />
             </>
           }
         />
+
         <Route
           path="/offers/software"
           element={
             <>
+              <Navbar />
               <Software />
               <Chat />
+              <Footer />
             </>
           }
         />
-        <Route path="/offers/sales" element={
-          <>
-          <Sales />
-          <Chat />
-          </>
-        } />
-        <Route path="/offers/forex" element={
-          <>
-          <Forex />
-          <Chat />
-          </>
-        } />
+
+        <Route
+          path="/offers/sales"
+          element={
+            <>
+              <Navbar />
+              <Sales />
+              <Chat />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/offers/forex"
+          element={
+            <>
+              <Navbar />
+              <Forex />
+              <Chat />
+              <Footer />
+            </>
+          }
+        />
+
         <Route
           path="/contact"
           element={
             <>
+              <Navbar />
               <Contact />
               <Chat />
+              <Footer />
             </>
           }
-        ></Route>
+        />
+
+        <Route
+          path="/promote"
+          element={
+            <>
+              <Promote />
+            </>
+          }
+        />
       </Routes>
-      <Footer />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/contact.css";
 import { motion as Motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import contactimg from "../assets/featuresimg.png";
+// import contactimg from "../assets/featuresimg.png";
 
 const ContactContent = () => {
     
@@ -155,15 +155,7 @@ const ContactContent = () => {
             {submitStatus && <div className="form-success">{submitStatus}</div>}
           </form>
         </Motion.div>
-        <Motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: false }}
-          className="contact-image"
-        >
-          <img src={contactimg} alt="contactimg" />
-        </Motion.div>
+        
       </div>
     </div>
   );
