@@ -10,9 +10,9 @@ const Promote = () => {
       <p>More Info</p>
 
       <div className="buttons">
-        <Link to="/promote" className="offer-btn">
+        <a href="https://wa.me/2347035731997" target='blank' className="offer-btn">
           Continue on whatsapp
-        </Link>
+        </a>
       </div>
     </div>
   );
